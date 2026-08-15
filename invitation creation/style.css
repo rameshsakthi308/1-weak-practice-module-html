@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#050505;color:#f5f5f5;font-family:'Montserrat',sans-serif;overflow-x:hidden;line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button,input,select,textarea{font:inherit}
+h1,h2,h3,h4{font-family:'Bebas Neue',sans-serif;letter-spacing:2px;line-height:1}
+p{color:#aaa}
+hr{border:0;border-top:1px solid #242424;margin:0}
+header{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;background:linear-gradient(90deg,rgba(0,0,0,.95),rgba(0,0,0,.5),rgba(0,0,0,.95)),url("images/hero.jpg") center/cover no-repeat;overflow:hidden}
+header:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,transparent 10%,rgba(0,0,0,.8) 100%)}
+header:after{content:"♠ ♦ ♣ ♥";position:absolute;top:35px;left:50%;transform:translateX(-50%);color:#c9a227;font-size:22px;letter-spacing:18px}
+.header-content{position:relative;z-index:2;width:90%;animation:fadeIn 1.5s ease}
+.top-line{font-size:11px;letter-spacing:6px;color:#c9a227;font-weight:700;margin-bottom:25px}
+header h1{font-size:clamp(90px,16vw,220px);color:#fff;text-shadow:0 10px 40px #000}
+.tagline{font-size:11px;letter-spacing:5px;color:#ddd;margin:25px 0}
+header hr{width:150px;margin:30px auto;border-color:#c9a227}
+nav{position:sticky;top:0;z-index:1000;background:rgba(5,5,5,.96);border-bottom:1px solid #292929;backdrop-filter:blur(10px)}
+nav ul{width:95%;max-width:1400px;margin:auto;display:flex;justify-content:center;align-items:center;gap:5px;list-style:none;overflow-x:auto}
+nav li{flex-shrink:0}
+nav a{display:block;padding:18px 15px;color:#999;font-size:10px;font-weight:700;letter-spacing:2px;transition:.3s}
+nav a:hover{color:#c9a227}
+main{background:#070707}
+section{width:min(1150px,90%);margin:auto;padding:110px 0}
+section h2{font-size:clamp(55px,8vw,100px);color:#fff;margin-bottom:40px}
+section h2:after{content:"";display:block;width:80px;height:2px;background:#c9a227;margin-top:25px}
+#hero{width:100%;min-height:90vh;text-align:center;padding:100px 5%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at center,#17120a,#070707 65%)}
+#hero figure{width:min(1000px,100%);position:relative;margin-bottom:45px;border:1px solid #292929;box-shadow:0 30px 80px rgba(0,0,0,.8)}
+#hero figure:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.8))}
+#hero figcaption{position:absolute;bottom:25px;left:50%;transform:translateX(-50%);z-index:2;color:#c9a227;font-size:11px;letter-spacing:4px;width:90%}
+#hero h2{font-size:clamp(60px,10vw,130px);margin-bottom:25px}
+#hero h2:after{margin:25px auto}
+#hero p{max-width:700px;margin:10px auto;font-size:15px}
+button{background:transparent;color:#c9a227;border:1px solid #c9a227;padding:15px 30px;margin:30px 8px 0;font-size:10px;font-weight:700;letter-spacing:3px;cursor:pointer;transition:.4s}
+button:hover{background:#c9a227;color:#050505;box-shadow:0 0 25px rgba(201,162,39,.2)}
+#about{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+#about>h2{grid-column:1/-1}
+#about article{padding:35px;border:1px solid #242424;background:linear-gradient(145deg,#111,#080808);transition:.4s}
+#about article:hover{border-color:#c9a227;transform:translateY(-5px)}
+#about h3{font-size:35px;color:#c9a227;margin-bottom:20px}
+#about p{font-size:14px;margin-bottom:15px}
+blockquote{font-family:'Bebas Neue',sans-serif;font-size:55px;color:#fff;margin:25px 0}
+cite{color:#c9a227}
+#about ul,#highlights ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:15px}
+#about li,#highlights li{color:#aaa;border-bottom:1px solid #222;padding:10px}
+#about li:first-letter,#highlights li:first-letter{color:#c9a227}
+#details{text-align:center}
+#details h2{margin-bottom:60px}
+#details dl{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#292929;border:1px solid #292929}
+#details dt,#details dd{background:#0d0d0d;padding:30px 15px}
+#details dt{color:#c9a227;font-weight:700;font-size:12px;letter-spacing:2px}
+#details dd{color:#aaa;font-size:13px}
+#game ol{counter-reset:game;list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:15px}
+#game li{counter-increment:game;min-height:180px;padding:25px;background:#101010;border:1px solid #252525;color:#aaa;position:relative}
+#game li:before{content:"0" counter(game);display:block;color:#c9a227;font-family:'Bebas Neue',sans-serif;font-size:45px;margin-bottom:20px}
+aside{width:100%;padding:110px 5%;text-align:center;background:linear-gradient(135deg,#151108,#050505)}
+aside h2{font-size:80px}
+aside mark{display:inline-block;background:#c9a227;color:#050505;padding:15px 25px;font-weight:700;margin:20px 0}
+aside small{display:block;color:#555;margin-top:25px}
+#facts{text-align:center}
+#facts p{display:inline-block;width:18%;min-width:150px;padding:30px 10px;border:1px solid #252525;background:#101010;margin:5px}
+#facts strong{display:block;color:#c9a227;font-size:12px;letter-spacing:1px;margin-bottom:8px}
+#crew{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+#crew>h2,#crew>p{grid-column:1/-1}
+#crew article{background:#0d0d0d;border:1px solid #242424;padding-bottom:25px;text-align:center;transition:.4s}
+#crew article:hover{border-color:#c9a227;transform:translateY(-8px)}
+#crew figure{position:relative;overflow:hidden}
+#crew figure img{width:100%;height:350px;object-fit:cover;filter:grayscale(100%);transition:.5s}
+#crew article:hover img{filter:grayscale(0);transform:scale(1.05)}
+#crew figcaption{position:absolute;bottom:15px;left:0;right:0;color:#c9a227;font-size:10px;letter-spacing:3px}
+#crew h3{font-size:30px;color:#fff;margin:20px 0 10px}
+#crew article p{font-size:12px;padding:0 15px}
+#highlights{text-align:center}
+#highlights ul{max-width:850px;margin:auto;grid-template-columns:repeat(2,1fr)}
+#highlights li{font-size:14px;padding:18px;text-align:left;background:#0d0d0d;border:1px solid #202020}
+#menu,#schedule{text-align:center;overflow-x:auto}
+table{width:100%;border-collapse:collapse;margin-top:40px;background:#0c0c0c;min-width:650px}
+caption{caption-side:top;color:#c9a227;font-size:14px;letter-spacing:3px;margin-bottom:20px}
+th{background:#15120b;color:#c9a227;font-size:11px;letter-spacing:2px}
+td,th{padding:18px;border:1px solid #252525}
+td{color:#aaa;font-size:13px}
+tbody tr{transition:.3s}
+tbody tr:hover{background:#17130a}
+#status{text-align:center}
+progress,meter{width:80%;height:25px;margin:15px 0 30px;accent-color:#c9a227}
+#gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
+#gallery h2,#gallery>p{grid-column:1/-1}
+#gallery figure{position:relative;overflow:hidden;border:1px solid #242424}
+#gallery img{width:100%;height:400px;object-fit:cover;transition:.5s}
+#gallery figure:hover img{transform:scale(1.08)}
+#gallery figcaption{position:absolute;bottom:0;left:0;right:0;padding:25px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.9));font-family:'Bebas Neue',sans-serif;font-size:30px}
+#video,#music{text-align:center}
+video{width:min(900px,100%);margin-top:30px;border:1px solid #292929;background:#000}
+audio{width:min(600px,100%);margin-top:30px}
+#register{max-width:800px}
+form{margin-top:40px}
+fieldset{border:1px solid #292929;padding:40px;background:linear-gradient(145deg,#111,#080808)}
+legend{padding:0 15px;color:#c9a227;font-family:'Bebas Neue',sans-serif;font-size:30px}
+label{display:block;color:#aaa;font-size:12px;margin:20px 0 8px}
+input[type=text],input[type=tel],select,textarea{width:100%;background:#050505;border:1px solid #292929;color:#fff;padding:14px;outline:none;transition:.3s}
+input:focus,select:focus,textarea:focus{border-color:#c9a227}
+input[type=radio],input[type=checkbox]{accent-color:#c9a227;margin-right:8px}
+label:has(input[type=radio]),label:has(input[type=checkbox]){display:inline-block;margin-right:20px}
+textarea{resize:vertical}
+#register button{margin-top:25px}
+#faq details{border-bottom:1px solid #292929;padding:20px 0}
+#faq summary{cursor:pointer;color:#fff;font-weight:600;font-size:14px;list-style:none}
+#faq summary:after{content:"+";float:right;color:#c9a227;font-size:20px}
+#faq details[open] summary:after{content:"−"}
+#faq details p{padding:20px 30px 0;font-size:13px}
+#location{text-align:center;background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.9)),url("images/location.jpg") center/cover no-repeat}
+#location iframe{width:100%;border:1px solid #292929;margin-top:30px;filter:grayscale(100%)}
+#contact{text-align:center}
+address{font-style:normal;border:1px solid #252525;background:#0d0d0d;padding:40px;max-width:600px;margin:auto}
+address p{margin:12px 0}
+address a{color:#c9a227}
+footer{text-align:center;padding:70px 20px;background:#030303;border-top:1px solid #202020}
+footer hr{width:80px;margin:0 auto 30px;border-color:#c9a227}
+footer p{color:#c9a227;font-family:'Bebas Neue',sans-serif;font-size:30px;line-height:1.5}
+footer small{font-family:'Montserrat',sans-serif;color:#555;font-size:9px;letter-spacing:2px}
+@keyframes fadeIn{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:900px){
+nav ul{justify-content:flex-start}
+#about{grid-template-columns:1fr}
+#game ol{grid-template-columns:repeat(2,1fr)}
+#crew{grid-template-columns:repeat(2,1fr)}
+#details dl{grid-template-columns:repeat(2,1fr)}
+#facts p{width:45%}
+}
+@media(max-width:600px){
+header{min-height:90vh}
+header:after{font-size:16px;letter-spacing:10px}
+.top-line{font-size:8px;letter-spacing:3px}
+header h1{font-size:80px}
+.tagline{font-size:8px;letter-spacing:3px}
+nav a{padding:15px 10px;font-size:8px}
+section{padding:75px 0}
+#hero{padding:70px 5%}
+#hero h2{font-size:60px}
+#about ul,#highlights ul{grid-template-columns:1fr}
+#details dl{grid-template-columns:1fr}
+#game ol{grid-template-columns:1fr}
+#game li{min-height:auto}
+#facts p{width:100%;margin:5px 0}
+#crew{grid-template-columns:1fr}
+#crew figure img{height:420px}
+#gallery{grid-template-columns:1fr}
+#gallery img{height:300px}
+aside h2{font-size:60px}
+fieldset{padding:25px 20px}
+}
